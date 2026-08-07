@@ -1,7 +1,13 @@
 import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal, Section } from "./primitives";
+
+const EMAILJS_SERVICE_ID = "service_ymma2ax";
+const EMAILJS_TEMPLATE_ID = "template_inf2n04";
+const EMAILJS_PUBLIC_KEY = "WQ2jqR9UAszznyKCK";
+
 
 const details = [
   {
