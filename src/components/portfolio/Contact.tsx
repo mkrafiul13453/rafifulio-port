@@ -1,7 +1,13 @@
 import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal, Section } from "./primitives";
+
+const EMAILJS_SERVICE_ID = "service_ymma2ax";
+const EMAILJS_TEMPLATE_ID = "template_inf2n04";
+const EMAILJS_PUBLIC_KEY = "WQ2jqR9UAszznyKCK";
+
 
 const details = [
   {
@@ -33,20 +39,34 @@ const details = [
 export function Contact() {
   const [sending, setSending] = useState(false);
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
     setSending(true);
-    const params = new URLSearchParams({
-      subject: String(data.get("subject") ?? "Portfolio enquiry"),
-      body: `${data.get("message") ?? ""}\n\n— ${data.get("name") ?? ""} (${data.get("email") ?? ""})`,
-    });
-    window.location.href = `mailto:mkrafiul13453@gmail.com?${params.toString()}`;
-    toast.success("Opening your email app…");
-    form.reset();
-    setSending(false);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: String(data.get("name") ?? ""),
+          from_name: String(data.get("name") ?? ""),
+          email: String(data.get("email") ?? ""),
+          reply_to: String(data.get("email") ?? ""),
+          subject: String(data.get("subject") ?? "Portfolio enquiry"),
+          message: String(data.get("message") ?? ""),
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      toast.success("Message sent! I'll get back to you soon.");
+      form.reset();
+    } catch {
+      toast.error("Couldn't send the message. Please email me directly.");
+    } finally {
+      setSending(false);
+    }
   };
+
 
   return (
     <Section
