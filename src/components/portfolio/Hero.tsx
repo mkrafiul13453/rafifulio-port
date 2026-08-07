@@ -26,9 +26,9 @@ export function Hero() {
             Frontend Developer | React.js | Next.js | JavaScript
           </span>
 
-          <h1 className="mt-6 text-4xl font-bold leading-[1.1] sm:text-5xl md:text-6xl">
-            Hi, I&apos;m M.K Rafiul Akter Rafi
-            <span className="mt-2 block text-gradient">Frontend Developer</span>
+          <h1 className="mt-6 text-4xl font-bold leading-[1.1] uppercase sm:text-5xl md:text-6xl">
+            M.K RAFIUL AKTER RAFI
+            <span className="mt-4 block text-gradient normal-case">Frontend Developer</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
