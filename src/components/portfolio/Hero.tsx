@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
-import profile from "@/assets/profile.jpg";
+
+const profileUrl = "https://i.postimg.cc/05mWfgdw/photo-2025-07-27-11-02-17-(2).png";
 
 const stats = [
   { value: "7+", label: "Months Experience" },
@@ -93,13 +94,13 @@ export function Hero() {
             className="absolute -inset-6 rounded-[2.5rem] bg-gradient-accent opacity-25 blur-3xl"
             aria-hidden="true"
           />
-          <div className="glass relative overflow-hidden rounded-[2rem] p-2">
+          <div className="glass relative aspect-square overflow-hidden rounded-full p-2">
             <img
-              src={profile}
+              src={profileUrl}
               alt="Portrait of M.K Rafiul Akter Rafi, frontend developer"
               width={912}
               height={1104}
-              className="h-full w-full rounded-[1.6rem] object-cover"
+              className="h-full w-full rounded-full object-cover"
             />
           </div>
 
