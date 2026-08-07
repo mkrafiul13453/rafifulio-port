@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
-import profile from "@/assets/profile.jpg";
+
+const profileUrl = "https://i.postimg.cc/05mWfgdw/photo-2025-07-27-11-02-17-(2).png";
 
 const stats = [
   { value: "7+", label: "Months Experience" },
