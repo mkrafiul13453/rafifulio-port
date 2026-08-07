@@ -1,0 +1,35 @@
+M.K RAFIUL AKTER RAFI
+Frontend Developer
+
+Email: mkrafiul13453@gmail.com
+Phone: 01709882718
+LinkedIn: https://www.linkedin.com/in/mk-rafiul
+GitHub: https://github.com/mkrafiul13453
+Location: Daffodil Smart City (DSC), Birulia, Savar, Dhaka - 1216
+
+PROFILE
+Frontend Developer specializing in React.js, Next.js, JavaScript, Tailwind CSS and modern
+web technologies. Software Engineering student passionate about clean, responsive and
+user-friendly web applications.
+
+EDUCATION
+Daffodil International University — Undergraduate, Software Engineering (ongoing)
+
+EXPERIENCE
+Self-directed Web Development — 7 months
+- Building complete web projects
+- Debugging and problem solving
+- Frontend architecture
+- API integration
+- Database handling
+- Authentication implementation
+
+SKILLS
+Frontend: HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), React.js, Next.js
+Backend: Node.js, Express.js, MongoDB, REST API Development
+Other: Responsive Web Design, UI/UX Principles, API Integration, Authentication Systems
+
+PROJECT
+SportNest — Sports Venue Booking Platform
+Hourly booking for badminton courts, table tennis, football turf and swimming pool.
+Stack: Next.js, React.js, Hero UI, Framer Motion, Node.js, MongoDB Atlas, Better Auth, JWT.
